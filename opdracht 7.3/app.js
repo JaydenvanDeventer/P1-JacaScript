@@ -1,17 +1,15 @@
 
-const knop = document.getElementById("knop");
-const tellerElement = document.getElementById("teller");
+let getal = document.getElementById("teller")
+let number = 0
 
-let teller = 0;
+function clicker() {
+    number++
 
 
-knop.addEventListener("click", function () {
-
-    teller++;
-
-    if (teller === 10) {
-        teller = 0;
+    if (number > 10) {
+        number = 0
     }
+    
+    getal.innerText = number
 
-    tellerElement.textContent = teller;
-});
+}
